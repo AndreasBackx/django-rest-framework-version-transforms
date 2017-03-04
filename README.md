@@ -40,9 +40,9 @@ This library aims to make maintenance of resource versions simple and intuitive 
 Requirements
 ------------
 
--  Python (2.7, 3.3, 3.4)
--  Django (1.6, 1.7, 1.8)
--  Django REST Framework (2.4, 3.0, 3.1)
+-  Python (2.7, 3.3, 3.4, 3.5)
+-  Django (1.6, 1.7, 1.8, 1.9, 1.10)
+-  Django REST Framework (3.0, 3.1, 3.2, 3.3, 3.4)
 
 Installation
 ------------
@@ -125,7 +125,7 @@ In the second example, the `.backwards()` method would remove the field that is 
 
 #### Uniform vs. Per-Endpoint Versioning
 
-There are two schools of thought around versioning of resources within a REST API. 
+There are two schools of thought around versioning of resources within a REST API.
 Uniform API versioning schemes increment the version of the entire API at once whenever one endpoint introduces an incompatible change.
 In contrast, Per-Endpoint API versioning allows demands that a client know the version number of each resource with which they interact.
 
@@ -294,6 +294,14 @@ against all supported versions of Python and Django. Install tox globally, and t
 ```bash
 $ tox
 ```
+
+It is best to specify an environment or this will take at least 1 hour (if you're lucky). It is recommended to test locally on the latest versions of Django and Django REST Framework and setup Travis for your fork before making a pull request to make sure all tests pass.
+
+```bash
+$ tox -e {ENVIRONMENT}
+```
+
+See `tox.ini` for all tested environments.
 
 ### Documentation
 

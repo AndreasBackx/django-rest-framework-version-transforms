@@ -1,37 +1,55 @@
 language: python
-
+cache: pip
 sudo: false
 
+python:
+  - 3.5
+
 env:
+  - TOX_ENV=py35-django-110-drf-33
+  - TOX_ENV=py35-django-110-drf-34
+  - TOX_ENV=py35-django-19-drf-31
+  - TOX_ENV=py35-django-19-drf-32
+  - TOX_ENV=py35-django-19-drf-33
+  - TOX_ENV=py35-django-19-drf-34
+  - TOX_ENV=py35-django-18-drf-30
+  - TOX_ENV=py35-django-18-drf-31
+  - TOX_ENV=py35-django-18-drf-32
+  - TOX_ENV=py35-django-18-drf-33
+  - TOX_ENV=py35-django-18-drf-34
   - TOX_ENV=py34-flake8
   - TOX_ENV=py34-docs
-  - TOX_ENV=py27-django1.6-drf3.0
-  - TOX_ENV=py27-django1.6-drf3.1
-  - TOX_ENV=py27-django1.6-drf3.2
-  - TOX_ENV=py27-django1.7-drf3.0
-  - TOX_ENV=py27-django1.7-drf3.1
-  - TOX_ENV=py27-django1.7-drf3.2
-  - TOX_ENV=py27-django1.8-drf3.0
-  - TOX_ENV=py27-django1.8-drf3.1
-  - TOX_ENV=py27-django1.8-drf3.2
-  - TOX_ENV=py33-django1.6-drf3.0
-  - TOX_ENV=py33-django1.6-drf3.1
-  - TOX_ENV=py33-django1.6-drf3.2
-  - TOX_ENV=py33-django1.7-drf3.0
-  - TOX_ENV=py33-django1.7-drf3.1
-  - TOX_ENV=py33-django1.7-drf3.2
-  - TOX_ENV=py33-django1.8-drf3.0
-  - TOX_ENV=py33-django1.8-drf3.1
-  - TOX_ENV=py33-django1.8-drf3.2
-  - TOX_ENV=py34-django1.6-drf3.0
-  - TOX_ENV=py34-django1.6-drf3.1
-  - TOX_ENV=py34-django1.6-drf3.2
-  - TOX_ENV=py34-django1.7-drf3.0
-  - TOX_ENV=py34-django1.7-drf3.1
-  - TOX_ENV=py34-django1.7-drf3.2
-  - TOX_ENV=py34-django1.8-drf3.0
-  - TOX_ENV=py34-django1.8-drf3.1
-  - TOX_ENV=py34-django1.8-drf3.2
+  - TOX_ENV=py34-django-110-drf-33
+  - TOX_ENV=py34-django-110-drf-34
+  - TOX_ENV=py34-django-19-drf-31
+  - TOX_ENV=py34-django-19-drf-32
+  - TOX_ENV=py34-django-19-drf-33
+  - TOX_ENV=py34-django-19-drf-34
+  - TOX_ENV=py34-django-18-drf-30
+  - TOX_ENV=py34-django-18-drf-31
+  - TOX_ENV=py34-django-18-drf-32
+  - TOX_ENV=py34-django-18-drf-33
+  - TOX_ENV=py34-django-18-drf-34
+  - TOX_ENV=py33-django-18-drf-30
+  - TOX_ENV=py33-django-18-drf-31
+  - TOX_ENV=py33-django-18-drf-32
+  - TOX_ENV=py33-django-18-drf-33
+  - TOX_ENV=py33-django-18-drf-34
+  - TOX_ENV=py27-django-110-drf-33
+  - TOX_ENV=py27-django-19-drf-31
+  - TOX_ENV=py27-django-19-drf-32
+  - TOX_ENV=py27-django-19-drf-33
+  - TOX_ENV=py27-django-18-drf-30
+  - TOX_ENV=py27-django-18-drf-31
+  - TOX_ENV=py27-django-18-drf-32
+  - TOX_ENV=py27-django-18-drf-33
+  - TOX_ENV=py27-django-17-drf-30
+  - TOX_ENV=py27-django-17-drf-31
+  - TOX_ENV=py27-django-17-drf-32
+  - TOX_ENV=py27-django-17-drf-33
+  - TOX_ENV=py27-django-16-drf-30
+  - TOX_ENV=py27-django-16-drf-31
+  - TOX_ENV=py27-django-16-drf-32
 
 install:
   - pip install tox
